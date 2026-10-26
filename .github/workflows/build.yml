@@ -1,0 +1,36 @@
+name: build
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ "v*" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyinstaller
+
+      - name: Build
+        run: powershell -ExecutionPolicy Bypass -File build.ps1
+
+      - name: Zip onedir build
+        run: Compress-Archive -Path dist/PhotoWatermark/* -DestinationPath dist/PhotoWatermark-onedir-win64.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PhotoWatermark-win64
+          path: |
+            dist/PhotoWatermark-onedir-win64.zip
+            dist/PhotoWatermark.exe
