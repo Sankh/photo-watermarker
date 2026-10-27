@@ -108,4 +108,4 @@ A local-only Windows desktop tool that stamps photo EXIF (date, aperture/shutter
 
 ## License
 
-MIT © 2026 Wang Dazhong (王大中)
+MIT © 2026 zach1174
