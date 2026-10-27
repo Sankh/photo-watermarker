@@ -1,5 +1,7 @@
 # 照片批量水印工具 · Photo Batch Watermarker
 
+[![build](https://github.com/Sankh/photo-watermarker/actions/workflows/build.yml/badge.svg)](https://github.com/Sankh/photo-watermarker/actions/workflows/build.yml)
+[![release](https://img.shields.io/github/v/release/Sankh/photo-watermarker?color=2f6fed)](https://github.com/Sankh/photo-watermarker/releases/latest)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Pillow](https://img.shields.io/badge/Pillow-10%2B-5C9EAD)](https://python-pillow.org/)
 [![Platform](https://img.shields.io/badge/Windows-10%2F11-0078D4?logo=windows&logoColor=white)](https://www.microsoft.com/windows)
